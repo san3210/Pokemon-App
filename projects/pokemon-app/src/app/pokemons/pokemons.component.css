@@ -1,0 +1,28 @@
+.pokemons {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 8em;
+}
+  
+.pokemons li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #607D8B;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.3em;
+    border-radius: 8px;
+}
+  
+.pokemons li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+}
+  
+.pokemons .text {
+    position: relative;
+    top: -3px;
+}
