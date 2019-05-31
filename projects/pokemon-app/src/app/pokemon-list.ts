@@ -1,3 +1,4 @@
+/*
 import { Pokemon } from './pokemon';
 
 export const POKEMONS: Pokemon[] = [
@@ -14,3 +15,4 @@ export const POKEMONS: Pokemon[] = [
   { name: 'Metapod' },
   { name: 'Butterfree' }
 ];
+*/
