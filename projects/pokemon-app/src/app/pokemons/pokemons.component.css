@@ -4,16 +4,17 @@
     padding: 0;
     width: 8em;
 }
-  
+
 .pokemons li {
     cursor: pointer;
     position: relative;
     left: 0;
-    background-color: #607D8B;
+    background-color: #5E5E5E;
     margin: .5em;
     padding: .3em 0;
-    height: 1.3em;
+    height: 1.2em;
     border-radius: 8px;
+    text-transform: capitalize;
 }
   
 .pokemons li:hover {
