@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class PokemonServiceService {
 
-  private pokemonsUrl = 'https://pokeapi.co/api/v2/pokemon';
+  private pokemonsUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
   constructor(private http: HttpClient) { }
 
@@ -19,7 +19,7 @@ export class PokemonServiceService {
     return this.http.get<Pokemon>(this.pokemonsUrl);
   }
 
-  getPokemonDetails() {
-    //return this.http.get<PokemonResource>(this.PokemonResource);
+  getPokemonName(name: string) {
+    return this.http.get<PokemonResource>(this.pokemonsUrl+name);
   }
 }

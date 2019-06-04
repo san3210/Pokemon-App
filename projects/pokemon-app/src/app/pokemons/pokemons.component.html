@@ -1,5 +1,10 @@
-<ul class="pokemons">
-    <li *ngFor="let pokemon of pokemons">
-        {{pokemon.name}}
-    </li>
+<ul *ngIf="pokemons" class="pokemons">
+    <div *ngFor="let pokemon of pokemons">
+        <li>
+          {{pokemon.name}}
+        </li>
+        <app-pokemon-detail [pokemonName] = "pokemon.name"></app-pokemon-detail>
+    </div>
+    
+    <!--<app-pokemon-detail [pokemonName] = "pokemon.name"></app-pokemon-detail>-->
 </ul>

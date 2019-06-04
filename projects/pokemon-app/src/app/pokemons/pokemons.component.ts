@@ -12,23 +12,23 @@ export class PokemonsComponent implements OnInit {
 
   //pokemons = POKEMONS;
   pokemons: PokemonResult[];
-  pokemonDetails: PokemonResource;
+  //pokemonDetails: PokemonSprites;
 
   constructor(private pokemonService: PokemonServiceService) { }
 
   ngOnInit() {
     this.getPokemons();
-    this.getPokemonDetails();
+    //this.getPokemonName();
   }
 
   getPokemons() {
-    return this.pokemonService.getPokemons()
+    this.pokemonService.getPokemons()
     .subscribe(pokemons => this.pokemons = pokemons.results);
-    //.subscribe(pokemons => console.log(pokemons));
+    //.subscribe(pokemons => console.log(this.pokemons = pokemons.results));
   }
 
-  getPokemonDetails() {
+  //getPokemonName() {
     //return this.pokemonService.getPokemonDetails()
-    //.subscribe(pokemonDetails => this.pokemonDetails = pokemonDetails.);
-  }
+    //.subscribe(pokemonDetails => this.pokemonDetails = pokemonDetails.sprites);
+  //}
 }

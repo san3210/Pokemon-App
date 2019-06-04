@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { PokemonSprites } from '../pokemon';
+import { PokemonServiceService } from '../pokemon-service.service';
 
 @Component({
   selector: 'app-pokemon-detail',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemon-detail.component.css']
 })
 export class PokemonDetailComponent implements OnInit {
+pokemonImgName: PokemonSprites;
 
-  constructor() { }
+@Input('pokemonName') pokeName: string;
+
+  constructor(private pokemonService: PokemonServiceService) { }
 
   ngOnInit() {
+    if(this.pokeName) {
+      this.pokemonService.getPokemonName(this.pokeName)
+    .subscribe(pokeImg => this.pokemonImgName = pokeImg.sprites);
+    }
   }
+
 
 }
