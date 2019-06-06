@@ -1,0 +1,12 @@
+.imageDiv {
+    height: 0;
+}
+
+.imgSrc {
+    position: relative;
+    float: left;
+    top: 2.5em;
+    right: 12em;
+    cursor: pointer;
+}
+
