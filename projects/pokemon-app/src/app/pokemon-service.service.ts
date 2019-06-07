@@ -24,4 +24,9 @@ export class PokemonServiceService {
   getPokemonName(name: string) {
     return this.http.get<PokemonResource>(this.pokemonsUrl+name);
   }
+
+  getPokemonInfo(name: string) {
+    return this.http.get<PokemonResource>(this.pokemonsUrl+name);
+  }
+
 }

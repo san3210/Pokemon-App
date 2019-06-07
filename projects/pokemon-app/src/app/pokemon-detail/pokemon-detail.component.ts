@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PokemonSprites } from '../pokemon';
+import { PokemonSprites, PokemonResource } from '../pokemon';
 import { PokemonServiceService } from '../pokemon-service.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { PokemonServiceService } from '../pokemon-service.service';
 })
 export class PokemonDetailComponent implements OnInit {
 pokemonImgName: PokemonSprites;
+pokemonInfo: PokemonResource;
 
 @Input('pokemonName') pokeName: string;
 

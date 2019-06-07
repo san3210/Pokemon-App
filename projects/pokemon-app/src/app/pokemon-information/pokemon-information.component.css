@@ -1,0 +1,17 @@
+.pokeType {
+    border: dashed;
+    width: 4em;
+    height: 1.5em;
+    list-style: none;
+    display: inline-block;
+    margin: 2em .5em;
+    text-align: center;
+}
+
+.pokeStat {
+    border: solid;
+    width: 13em;
+    height: 1.5em;
+    list-style: none;
+    text-align: justify;
+}

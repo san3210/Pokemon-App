@@ -4,9 +4,12 @@
 
 .imgSrc {
     position: relative;
-    float: left;
-    top: 2.5em;
-    right: 12em;
+    display: inline-block;
+    padding: 0.3em;
+    top: 1em;
+    right: 0.2em;
+    /* 
+    right: 7.5em; */
     cursor: pointer;
 }
 

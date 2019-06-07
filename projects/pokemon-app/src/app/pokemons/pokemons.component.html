@@ -1,12 +1,12 @@
 <ul *ngIf="pokemons" class="pokemons">
-  <div *ngFor="let pokemon of pokemons">
-      <div class="pokemonList" routerLink="/pokemon-information/{{pokemon.name}}">
+  <div *ngFor="let pokemon of pokemons" class="pokemonList" routerLink="/pokemon/{{pokemon.name}}">
+      <!-- <div class="pokemonList" routerLink="/pokemon-information/{{pokemon.name}}"> -->
         <!-- {{pokemon.name}} -->
-        <a routerLink="/pokemon-information/{{pokemon.name}}">
+        <a routerLink="/pokemon/{{pokemon.name}}">
           {{pokemon.name}}
         </a>
-      </div>
-      <app-pokemon-detail [pokemonName] = "pokemon.name" routerLink="/pokemon-information/{{pokemon.name}}"></app-pokemon-detail>
+      <!-- </div> -->
+      <app-pokemon-detail [pokemonName] = "pokemon.name" routerLink="/pokemon/{{pokemon.name}}"></app-pokemon-detail>
       <!-- <app-pokemon-detail [pokemonName] = "pokemon.name"></app-pokemon-detail> -->
   </div>
 

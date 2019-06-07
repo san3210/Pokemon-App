@@ -1,3 +1,11 @@
-<p>
-  pokemon-information works!
-</p>
+<p>Pokemon Information</p>
+<ul>
+    <div *ngFor="let pokemon of pokemonType" class="pokeType">
+        <li>{{pokemon.type.name}}</li>   
+    </div>
+
+    <div *ngFor="let pokemon of pokemonStat" class="pokeStat">
+      <li>{{pokemon.stat.name}}</li>
+    </div>
+
+</ul>

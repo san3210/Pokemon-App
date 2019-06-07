@@ -16,13 +16,11 @@ export interface PokemonAbilities {
     slot: number;
 }
 
-/*PokemonResult*/ 
 export interface PokemonAbility {
     name: string;
     url: string;
 }
 
-/*PokemonResult*/ 
 export interface PokemonForms {
     name: string;
     url: string;
@@ -33,7 +31,6 @@ export interface PokemonGameIndices {
     version: PokemonVersion;
 }
 
-/*PokemonResult*/ 
 export interface PokemonVersion {
     name: string;
     url: string;
@@ -44,7 +41,6 @@ export interface PokemonMoves {
     version_group_details: PokemonVersionGroupDetails[]; 
 }
 
-/*PokemonResult*/ 
 export interface PokemonMove {
     name: string;
     url: string;   
