@@ -1,11 +1,33 @@
+h2 {
+    text-transform: capitalize;
+}
+
+.pokeBlock {
+    display: inline-block;
+    margin-right: 7em;
+}
+
+.pokeDiv {
+    margin: 1em;
+}
+
+.pokeHW {
+    border: solid;
+    width: 13em;
+    height: 1.5em;
+    text-align: justify;
+}
+
 .pokeType {
     border: dashed;
     width: 4em;
     height: 1.5em;
     list-style: none;
     display: inline-block;
-    margin: 2em .5em;
+    margin-right: .5em;
+    /* margin: 2em .5em; */
     text-align: center;
+    border-radius: 2em;
 }
 
 .pokeStat {
@@ -14,4 +36,34 @@
     height: 1.5em;
     list-style: none;
     text-align: justify;
+    text-transform: capitalize;
 }
+
+.pokeAbility {
+    border: solid;
+    width: 13em;
+    height: 1.5em;
+    list-style: none;
+    text-align: justify;
+    text-transform: capitalize;
+}
+
+.pokeNumberInfo {
+    padding: 0;
+    margin: -1em 1em;
+    text-align: right;
+    color: black;
+}
+
+.pokeMove {
+    border: solid;
+    width: 13em;
+    height: 1.5em;
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 2em;
+}
+
+

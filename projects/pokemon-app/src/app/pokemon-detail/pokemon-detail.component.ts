@@ -17,7 +17,7 @@ pokemonInfo: PokemonResource;
 
   ngOnInit() {
     if(this.pokeName) {
-      this.pokemonService.getPokemonName(this.pokeName)
+      this.pokemonService.getPokemonInfo(this.pokeName)
     .subscribe(pokeImg => this.pokemonImgName = pokeImg.sprites);
     }
   }

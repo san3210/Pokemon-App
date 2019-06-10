@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 //import { HttpClientModule } from '@angular/common/http';
-import { PokemonResult, Pokemon, PokemonSprites, PokemonResource } from './pokemon';
+import { PokemonResult, Pokemon, PokemonSprites, PokemonResource, PokemonStats } from './pokemon';
 //import { POKEMONS } from './pokemon-list';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -21,12 +21,16 @@ export class PokemonServiceService {
     return this.http.get<Pokemon>(this.pokemonsUrl+this.pokemonOffset+this.pokemonLimit);
   }
 
-  getPokemonName(name: string) {
-    return this.http.get<PokemonResource>(this.pokemonsUrl+name);
-  }
+  // getPokemonName(name: string) {
+  //   return this.http.get<PokemonResource>(this.pokemonsUrl+name);
+  // }
 
   getPokemonInfo(name: string) {
     return this.http.get<PokemonResource>(this.pokemonsUrl+name);
+  }
+  
+  getPokemonStats(name: string) {
+    return this.http.get<PokemonStats>(this.pokemonsUrl+name);
   }
 
 }
