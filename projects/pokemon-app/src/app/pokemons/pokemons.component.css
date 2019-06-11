@@ -4,11 +4,9 @@
     padding: 0;
 }
 
-/*.pokemons li*/
 .pokemonList {
     cursor: pointer;
     position: relative;
-    /* left: 0; */
     background-color: #5E5E5E;
     margin: .5em;
     padding: .5em;
@@ -18,26 +16,10 @@
     text-align: center;
     text-transform: capitalize;
     display: inline-block;
-    /* float: left; */
 }
 
 .pokemonList a {
     color: white;
     text-decoration: none;
     width: 250px;
-    /* position: relative;
-    display: block; */
   }
-
-/*
-.pokemonList:hover {
-    color: #607D8B;
-    background-color: #DDD;
-    left: .1em;
-}
-
-.pokemons .text {
-    position: relative;
-    top: -3px;
-}
-*/

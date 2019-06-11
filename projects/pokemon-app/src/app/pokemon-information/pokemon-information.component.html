@@ -1,9 +1,12 @@
-<h2>{{pokemonName}}'s Information</h2>
+<h2>#{{pokemonIdNumber}}: {{pokemonName}}</h2>
 <ul>
   <div class="pokeBlock">
-      <div class="pokeDiv">
-          <div *ngIf="pokemonImgName" class="imageDiv"> 
+      <div *ngIf="pokemonImgName" class="pokeDiv">
+          <div *ngIf="pokemonImgName.front_default" class="imageDiv"> 
               <img [src] = 'pokemonImgName.front_default' class="imgSrc">
+          </div>
+          <div *ngIf="!pokemonImgName.front_default" class="imageDiv"> 
+               <img src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png" class="imgSrc">
           </div>
       </div> 
       <div class="pokeDiv">
@@ -16,18 +19,18 @@
           </div> 
       </div> 
       <div class="pokeDiv">
-          <h2>{{pokemonName}}'s Abilities:</h2>
-          <div *ngFor="let pokemon of pokemonAbility" class="pokeAbility">
-            <li>{{pokemon.ability.name}}</li>
-          </div>
+          <h2>{{pokemonName}}'s Type:</h2>
+          <div *ngFor="let pokemon of pokemonType" class="pokeType" id="{{pokemon.type.name}}">
+              <li>{{pokemon.type.name}}</li>   
+          </div> 
       </div>
   </div>
   <div class="pokeBlock">
       <div class="pokeDiv">
-          <h2>{{pokemonName}}'s Type:</h2>
-          <div *ngFor="let pokemon of pokemonType" class="pokeType">
-              <li>{{pokemon.type.name}}</li>   
-          </div> 
+            <h2>{{pokemonName}}'s Abilities:</h2>
+            <div *ngFor="let pokemon of pokemonAbility" class="pokeAbility">
+              <li>{{pokemon.ability.name}}</li>
+            </div>
       </div>
       <div class="pokeDiv">
           <h2>{{pokemonName}}'s Statistic:</h2>
@@ -36,10 +39,19 @@
           </div>
       </div>
   </div>
+  <!-- <div class="pokeBlock">
     <div class="pokeDiv">
-        <h2>{{pokemonName}}'s Moves:</h2>
-        <div *ngFor="let pokemon of pokemonMove" class="pokeMove">
-          <li>{{pokemon.move.name}}</li>
-        </div>
+        <h2>{{pokemonName}}'s Description:</h2>
+        <p id="pokeDescription">something description something description</p>
     </div>
+  </div> -->
+  <div class="pokeBlock">
+        <div class="pokeDiv">
+                <h2>{{pokemonName}}'s Moves:</h2>
+                <div *ngFor="let pokemon of pokemonMove" class="pokeMove">
+                  <li>{{pokemon.move.name}}</li>
+                </div>
+        </div>
+  </div>
+
 </ul>

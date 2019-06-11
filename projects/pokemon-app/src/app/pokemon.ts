@@ -2,63 +2,33 @@ export interface Pokemon {
     count: number;
     next: string;
     previous: string;
-    results: PokemonResult[];
+    results: PokemonNameUrl[];
 }
 
-export interface PokemonResult {
+export interface PokemonNameUrl {
     name: string;
     url: string;
 }
 
 export interface PokemonAbilities {
-    ability: PokemonAbility
+    ability: PokemonNameUrl;
     is_hidden: boolean;
     slot: number;
 }
 
-export interface PokemonAbility {
-    name: string;
-    url: string;
-}
-
-export interface PokemonForms {
-    name: string;
-    url: string;
-}
-
 export interface PokemonGameIndices {
     game_index: number;
-    version: PokemonVersion;
-}
-
-export interface PokemonVersion {
-    name: string;
-    url: string;
+    version: PokemonNameUrl;
 }
 
 export interface PokemonMoves {
-    move: PokemonMove;
+    move: PokemonNameUrl;
     version_group_details: PokemonVersionGroupDetails[]; 
-}
-
-export interface PokemonMove {
-    name: string;
-    url: string;   
 }
 
 export interface PokemonVersionGroupDetails {
     level_learned_at: number;
-    move_learn_method: PokemonMoveLearnMethod;
-}
-
-export interface PokemonMoveLearnMethod {
-    name: string;
-    url: string;   
-}
-
-export interface PokemonSpecies {
-    name: string;
-    url: string;  
+    move_learn_method: PokemonNameUrl;
 }
 
 export interface PokemonSprites {
@@ -75,28 +45,18 @@ export interface PokemonSprites {
 export interface PokemonStats {
     base_stat: number;
     effort: number;
-    stat: PokemonStat;
-}
-
-export interface PokemonStat {
-    name: string;
-    url: string; 
+    stat: PokemonNameUrl;
 }
 
 export interface PokemonTypes {
     slot: number;
-    type: PokemonType;
-}
-
-export interface PokemonType {
-    name: string;
-    url: string;     
+    type: PokemonNameUrl;
 }
 
 export interface PokemonResource {
     abilities: PokemonAbilities[];
     base_experience: number;
-    forms: PokemonForms[];
+    forms: PokemonNameUrl[];
     game_indices: PokemonGameIndices[];
     height: number;
     held_items: string; //array?
@@ -106,7 +66,7 @@ export interface PokemonResource {
     moves: PokemonMoves[];
     name: string;
     order: number;
-    species: PokemonSpecies;
+    species: PokemonNameUrl;
     sprites: PokemonSprites;
     stats: PokemonStats[];
     types: PokemonTypes[];

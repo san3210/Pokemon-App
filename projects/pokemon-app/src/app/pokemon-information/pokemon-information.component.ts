@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Pokemon, PokemonType, PokemonStats, PokemonTypes, PokemonMoves, PokemonSprites, PokemonAbilities } from '../pokemon';
+import { Pokemon, PokemonStats, PokemonTypes, PokemonMoves, PokemonSprites, PokemonAbilities } from '../pokemon';
 import { PokemonServiceService } from '../pokemon-service.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
@@ -18,6 +18,7 @@ export class PokemonInformationComponent implements OnInit {
   pokemonImgName: PokemonSprites;
   pokemonName: string;
   pokemonAbility: PokemonAbilities[];
+  pokemonIdNumber: number;
 
   // @Input('pokemonName') pokeName: string;
   pokeName: string;
@@ -60,6 +61,9 @@ export class PokemonInformationComponent implements OnInit {
 
       this.pokemonService.getPokemonInfo(this.pokeName)
       .subscribe(pokeAbility => this.pokemonAbility = pokeAbility.abilities);
+
+      this.pokemonService.getPokemonInfo(this.pokeName)
+      .subscribe(pokeId => this.pokemonIdNumber = pokeId.id);
     }
 
   }

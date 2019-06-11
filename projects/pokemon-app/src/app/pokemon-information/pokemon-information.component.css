@@ -19,16 +19,84 @@ h2 {
 }
 
 .pokeType {
-    border: dashed;
+    border: dotted;
     width: 4em;
     height: 1.5em;
     list-style: none;
     display: inline-block;
     margin-right: .5em;
-    /* margin: 2em .5em; */
     text-align: center;
     border-radius: 2em;
 }
+
+#bug {
+    background-color: #A8B820;
+}
+
+#dark {
+    background-color: #705848;
+}
+
+#dragon {
+    background-color: #7038F8;
+}
+
+#electric {
+    background-color: #F8D030;
+}
+
+#fighting {
+    background-color: #C03028;
+}
+
+#fire {
+    background-color: #F08030;
+}
+
+#flying {
+    background-color: #A890F0;
+}
+
+#ghost {
+    background-color: #705898;
+}
+
+#grass {
+    background-color: #78C850;
+}
+
+#ground {
+    background-color: #E0C068;
+}
+
+#ice {
+    background-color: #98D8D8;
+}
+
+#normal {
+    background-color: #A8A878;
+}
+
+#poison {
+    background-color: #A040A0;
+}
+
+#psychic {
+    background-color: #F85888;
+}
+
+#rock {
+    background-color: #B8A038;
+}
+
+#steel {
+    background-color: #B8B8D0;
+}
+
+#water {
+    background-color: #6890F0;
+}
+
 
 .pokeStat {
     border: solid;
@@ -64,6 +132,12 @@ h2 {
     text-align: center;
     text-transform: capitalize;
     border-radius: 2em;
+}
+
+#pokeDescription {
+    width: 12em;
+    height: 12em;
+    border: solid;
 }
 
 
