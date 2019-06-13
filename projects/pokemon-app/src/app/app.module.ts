@@ -7,15 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { PokemonServiceService } from './pokemon-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-// import { PokemonDashboardComponent } from './pokemon-dashboard/pokemon-dashboard.component';
 import { PokemonInformationComponent } from './pokemon-information/pokemon-information.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonsComponent,
     PokemonDetailComponent,
-    // PokemonDashboardComponent,
     PokemonInformationComponent
   ],
   imports: [

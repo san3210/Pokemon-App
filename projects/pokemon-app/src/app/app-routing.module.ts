@@ -5,9 +5,9 @@ import { PokemonsComponent }      from './pokemons/pokemons.component';
 import { PokemonInformationComponent }   from './pokemon-information/pokemon-information.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/pokemon', pathMatch: 'full' },
   { path: 'pokemon/:name', component: PokemonInformationComponent },
-  { path: 'dashboard', component: PokemonsComponent }
+  { path: 'pokemon', component: PokemonsComponent }
 ];
 
 @NgModule({

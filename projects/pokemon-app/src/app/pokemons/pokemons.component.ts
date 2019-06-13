@@ -10,6 +10,8 @@ import { PokemonServiceService } from '../pokemon-service.service';
 export class PokemonsComponent implements OnInit {
 
   pokemons: PokemonNameUrl[];
+  counter = Array;
+
 
   constructor(private pokemonService: PokemonServiceService) { }
 
@@ -21,5 +23,9 @@ export class PokemonsComponent implements OnInit {
     this.pokemonService.getPokemons()
     .subscribe(pokemons => this.pokemons = pokemons.results);
   }
+  
 
+  numberReturn(length){
+    return new Array(length);
+  }
 }

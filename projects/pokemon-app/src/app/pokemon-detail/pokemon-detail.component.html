@@ -1,3 +1,8 @@
-<div *ngIf="pokemonImgName" class="imageDiv"> 
-  <img [src] = 'pokemonImgName.front_default' class="imgSrc">
+<div *ngIf="pokemonImgName">
+  <div *ngIf="pokemonImgName.front_default" class="imageDiv"> 
+    <img [src] = 'pokemonImgName.front_default' class="imgSrc">
+  </div>
+  <div *ngIf="!pokemonImgName.front_default" class="imageDiv"> 
+    <img src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" class="imgSrc">
+  </div>
 </div>
