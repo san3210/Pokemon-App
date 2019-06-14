@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonNameUrl, Pokemon, PokemonSprites, PokemonResource } from '../pokemon';
 import { PokemonServiceService } from '../pokemon-service.service';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-pokemons',
@@ -10,22 +11,31 @@ import { PokemonServiceService } from '../pokemon-service.service';
 export class PokemonsComponent implements OnInit {
 
   pokemons: PokemonNameUrl[];
-  counter = Array;
+  pokemonCount: number;
+  pageCounter: number[] = new Array();
 
-
-  constructor(private pokemonService: PokemonServiceService) { }
+  constructor(
+    private pokemonService: PokemonServiceService,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.getPokemons();
+    
   }
 
-  getPokemons() {
-    this.pokemonService.getPokemons()
-    .subscribe(pokemons => this.pokemons = pokemons.results);
+  getPokemons() :void {
+    this.route.params.subscribe(parameter => {
+      this.pokemonService.getPokemons(parameter.iCtr)
+      .subscribe(pokemons => {
+        this.pokemons = pokemons.results
+        this.pokemonCount = pokemons.count
+        this.pageCounter=[];
+          for(var iCtr=1;iCtr<((this.pokemonCount/66)+1);iCtr++) {
+              this.pageCounter.push(iCtr);
+          }
+      });
+    });
+    
   }
   
-
-  numberReturn(length){
-    return new Array(length);
-  }
 }

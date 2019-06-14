@@ -9,13 +9,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class PokemonServiceService {
 
   private pokemonsUrl = 'https://pokeapi.co/api/v2/pokemon/';
-  private pokemonOffset = '?offset=0';
+  private pokemonOffset = '?offset=';
   private pokemonLimit = '&limit=66';
 
   constructor(private http: HttpClient) { }
 
-  getPokemons() {
-    return this.http.get<Pokemon>(this.pokemonsUrl+this.pokemonOffset+this.pokemonLimit);
+  getPokemons(pageNumber: number) {
+    return this.http.get<Pokemon>(this.pokemonsUrl+this.pokemonOffset+(pageNumber-1)*66+this.pokemonLimit);
   }
 
   getPokemonInfo(name: string) {

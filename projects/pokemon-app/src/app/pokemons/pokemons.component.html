@@ -1,8 +1,8 @@
 <div  class="pokemons">
     <div class="pokemonPageNumber">
-        <li *ngFor='let x of counter(15); let i = index'>
-          {{i+1}}
-        </li>
+      <li *ngFor="let iCtr of pageCounter" routerLink="/page/{{iCtr}}">
+          {{iCtr}}
+      </li>
     </div>
 </div>
 
