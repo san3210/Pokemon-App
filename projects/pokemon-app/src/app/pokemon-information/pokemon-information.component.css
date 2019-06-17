@@ -35,11 +35,16 @@
 }
 
 #dragon {
-    background-color: #7038F8;
+    /* background-color: #7038F8; */
+    background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
 }
 
 #electric {
     background-color: #F8D030;
+}
+
+#fairy {
+    background-color: #EE99AC;
 }
 
 #fighting {
@@ -51,7 +56,8 @@
 }
 
 #flying {
-    background-color: #A890F0;
+    /* background-color: #A890F0; */
+    background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
 }
 
 #ghost {
@@ -63,7 +69,8 @@
 }
 
 #ground {
-    background-color: #E0C068;
+    /* background-color: #E0C068; */
+    background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
 }
 
 #ice {
@@ -79,7 +86,7 @@
 }
 
 #psychic {
-    background-color: #F85888;
+    background-color: #f366b9;
 }
 
 #rock {
@@ -151,3 +158,12 @@
     text-decoration: none;
 }
 
+.imgSrc2 {
+    /* position: relative; */
+    /* display: inline-block; */
+    /* padding: 0.3em; */
+    /* top: 3em; */
+    right: -0.4em;
+    height: 3.5em;
+    width: 3.5em;
+}

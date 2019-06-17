@@ -21,7 +21,8 @@
 .pokemonList a {
     color: #FFFFFF;
     text-decoration: none;
-    width: 250px;
+    font-size: 0.8em;
+    /* width: 250px; */
   }
 
 /* .pokemonPageSelect {
