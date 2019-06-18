@@ -9,7 +9,7 @@
 <ul *ngIf="pokemons" class="pokemons">
   <div *ngFor="let pokemon of pokemons" class="pokemonList" routerLink="/pokemon/{{pokemon.name}}">
         <a routerLink="/pokemon/{{pokemon.name}}">
-          {{pokemon.name}}
+         {{pokemon.name}}
         </a>
       <app-pokemon-detail [pokemonName] = "pokemon.name" routerLink="/pokemon/{{pokemon.name}}"></app-pokemon-detail>
   </div>

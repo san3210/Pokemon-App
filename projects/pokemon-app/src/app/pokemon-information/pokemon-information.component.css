@@ -139,9 +139,7 @@
 }
 
 #pokeDescription {
-    width: 12em;
-    height: 12em;
-    border: solid;
+    text-align: justify;
 }
 
 #backButton {
@@ -158,6 +156,17 @@
     text-decoration: none;
 }
 
+
+.imgSrc {
+    cursor: pointer;
+    border: dashed;
+    border-radius: 2em;
+    height: 5em;
+    width: 5.5em;
+    background-color: #c2ced6;
+}
+
+
 .imgSrc2 {
     /* position: relative; */
     /* display: inline-block; */
@@ -166,4 +175,7 @@
     right: -0.4em;
     height: 3.5em;
     width: 3.5em;
+    border: dotted;
+    border-radius: 2em;
+    background-color: #c2ced6
 }

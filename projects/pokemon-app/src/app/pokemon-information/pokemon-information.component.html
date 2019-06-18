@@ -39,12 +39,15 @@
           </div>
       </div>
   </div>
-  <!-- <div class="pokeBlock">
+  <div class="pokeBlock">
     <div class="pokeDiv">
         <h2>{{pokemonName}}'s Description:</h2>
-        <p id="pokeDescription">something description something description</p>
+        <div *ngIf="pokemonDescription">
+          <p id="pokeDescription"> {{pokemonDescription.flavor_text}} </p>
+        </div>
+        
     </div>
-  </div> -->
+  </div>
   <div class="pokeBlock">
         <div class="pokeDiv">
                 <h2>{{pokemonName}}'s Moves:</h2>

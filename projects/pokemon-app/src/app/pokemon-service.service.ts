@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Pokemon, PokemonSprites, PokemonResource, PokemonStats } from './pokemon';
+import { PokemonSpecies } from './pokemon-species';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -11,6 +12,7 @@ export class PokemonServiceService {
   private pokemonsUrl = 'https://pokeapi.co/api/v2/pokemon/';
   private pokemonOffset = '?offset=';
   private pokemonLimit = '&limit=66';
+  private pokemonsDesc = 'https://pokeapi.co/api/v2/pokemon-species/';
 
   constructor(private http: HttpClient) { }
 
@@ -24,6 +26,10 @@ export class PokemonServiceService {
   
   getPokemonStats(name: string) {
     return this.http.get<PokemonStats>(this.pokemonsUrl+name);
+  }
+
+  getPokemonDesc(name: string) {
+    return this.http.get<PokemonSpecies>(this.pokemonsDesc+name);
   }
 
 }

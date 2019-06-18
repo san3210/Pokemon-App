@@ -24,10 +24,10 @@
     /* padding: 0.3em; */
     border: dotted;
     border-radius: 2em;
+    background-color: #c2ced6;
     margin-top: 2.5em;
     right: -0.4em;
     cursor: pointer;
     height: 3.5em;
     width: 3.5em;
-    background-color: #c2ced6;
 }
