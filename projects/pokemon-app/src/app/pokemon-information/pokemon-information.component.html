@@ -34,7 +34,7 @@
       </div>
       <div class="pokeDiv">
           <h2>{{pokemonName}}'s Statistic:</h2>
-          <div *ngFor="let pokemon of pokemonStat" class="pokeStat">
+          <div *ngFor="let pokemon of pokemonStatDesc" class="pokeStat">
             <li>{{pokemon.stat.name}}: <p class="pokeNumberInfo">{{pokemon.base_stat}}</p></li>
           </div>
       </div>
@@ -42,10 +42,14 @@
   <div class="pokeBlock">
     <div class="pokeDiv">
         <h2>{{pokemonName}}'s Description:</h2>
-        <div *ngIf="pokemonDescription">
-          <p id="pokeDescription"> {{pokemonDescription.flavor_text}} </p>
-        </div>
-        
+        <!-- <div *ngIf="pokemonDescription"> -->
+          <div *ngIf="pokemonIsDefault && pokemonDescription">
+            <p id="pokeDescription"> {{pokemonDescription.flavor_text}} </p>
+          </div>
+          <div *ngIf="!pokemonIsDefault">
+            <p id="pokeDescription"> No description available for pokemon form </p> 
+          </div>
+        <!-- </div>  -->
     </div>
   </div>
   <div class="pokeBlock">
@@ -56,7 +60,7 @@
                 </div>
         </div>
   </div>
-  <!-- <div class="pokeDiv">
-    <a [routerLink]="['']" id="backButtonLink"><div id="backButton">Back</div></a>
-  </div> -->
+  <div class="pokeDiv">
+    <a [routerLink]="['']" id="backButtonLink"><div id="backButton">Return</div></a>
+  </div>
 </ul>

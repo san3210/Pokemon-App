@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Pokemon, PokemonSprites, PokemonResource, PokemonStats } from './pokemon';
-import { PokemonSpecies } from './pokemon-species';
+import { PokemonTextEntries, PokemonSpecies } from './pokemon-species';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -11,13 +11,14 @@ export class PokemonServiceService {
 
   private pokemonsUrl = 'https://pokeapi.co/api/v2/pokemon/';
   private pokemonOffset = '?offset=';
-  private pokemonLimit = '&limit=66';
+  private pokemonLimit = '&limit=';
+  private pokemonPageLimit = 66;
   private pokemonsDesc = 'https://pokeapi.co/api/v2/pokemon-species/';
 
   constructor(private http: HttpClient) { }
 
   getPokemons(pageNumber: number) {
-    return this.http.get<Pokemon>(this.pokemonsUrl+this.pokemonOffset+(pageNumber-1)*66+this.pokemonLimit);
+    return this.http.get<Pokemon>(this.pokemonsUrl+this.pokemonOffset+((pageNumber-1)*this.pokemonPageLimit)+this.pokemonLimit+this.pokemonPageLimit);
   }
 
   getPokemonInfo(name: string) {
@@ -30,6 +31,11 @@ export class PokemonServiceService {
 
   getPokemonDesc(name: string) {
     return this.http.get<PokemonSpecies>(this.pokemonsDesc+name);
+    // return this.http.get<PokemonTextEntries>(this.pokemonsDesc+name);
+  }
+
+  getPokemonLang(name: string) {
+    return this.http.get<PokemonTextEntries>(this.pokemonsDesc+name);
   }
 
 }
