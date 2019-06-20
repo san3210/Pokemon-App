@@ -20,11 +20,10 @@ export class PokemonInformationComponent implements OnInit {
   pokemonName: string;
   pokemonAbility: PokemonAbilities[];
   pokemonIdNumber: number;
-  pokemonDescription: PokemonTextEntries;
+  pokemonDescription: PokemonTextEntries[];
   pokemonIsDefault: boolean;
-  pokemonLanguage: string;
+  pokemonSpeciesName: PokemonNameUrl;
 
-  // @Input('pokemonName') pokeName: string;
   pokeName: string;
 
   constructor(
@@ -49,29 +48,17 @@ export class PokemonInformationComponent implements OnInit {
         this.pokemonIdNumber = pokeInfo.id
         this.pokemonStatDesc = pokeInfo.stats
         this.pokemonIsDefault = pokeInfo.is_default
-        if(this.pokemonIsDefault==true) {
-          this.pokemonService.getPokemonDesc(this.pokeName)
-          .subscribe(pokeDesc => {
-            this.pokemonDescription = pokeDesc.flavor_text_entries[1]
-              console.log(pokeDesc.flavor_text_entries[1]); 
-            this.pokemonLanguage = pokeDesc.flavor_text_entries[1].language.name;
-            console.log(this.pokemonLanguage);
-              // for(var iCtr=0;iCtr<12;iCtr++) {
-              //   this.pageCounter.push(iCtr);
-              // }
-            });
-          // this.pokemonService.getPokemonLang(this.pokeName)
-          // .subscribe(pokeLang => this.pokemonLanguage.name = pokeLang.language.name)
-          // if(this.pokemonLanguage.name==="en") {
-          //   console.log(this.pokemonLanguage.name);
-          // }
-        }
+        this.pokemonSpeciesName = pokeInfo.species
+          if(this.pokemonIsDefault==true) {
+            this.pokemonService.getPokemonDesc(this.pokemonSpeciesName.name)
+            .subscribe(pokeDesc => {
+              this.pokemonDescription = pokeDesc.flavor_text_entries
+              console.log(this.pokemonDescription);
+              });   
+          }
       });
-
       this.pokemonService.getPokemonStats(this.pokeName)
       .subscribe(pokeStats => this.pokemonBaseStats = pokeStats.base_stat);
     }
-
   }
-
 }

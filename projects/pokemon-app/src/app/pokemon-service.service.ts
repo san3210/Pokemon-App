@@ -31,11 +31,5 @@ export class PokemonServiceService {
 
   getPokemonDesc(name: string) {
     return this.http.get<PokemonSpecies>(this.pokemonsDesc+name);
-    // return this.http.get<PokemonTextEntries>(this.pokemonsDesc+name);
   }
-
-  getPokemonLang(name: string) {
-    return this.http.get<PokemonTextEntries>(this.pokemonsDesc+name);
-  }
-
 }

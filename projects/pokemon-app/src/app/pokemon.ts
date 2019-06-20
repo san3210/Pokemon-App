@@ -59,7 +59,7 @@ export interface PokemonResource {
     forms: PokemonNameUrl[];
     game_indices: PokemonGameIndices[];
     height: number;
-    held_items: string; //array?
+    held_items: string;
     id: number;
     is_default: boolean;
     location_area_encounter: string;

@@ -7,12 +7,14 @@
 .pokemonList {
     cursor: pointer;
     position: relative;
-    background-color: #5E5E5E;
-    margin: .5em;
-    padding: .5em;
+    /* background-color: #5E5E5E; */
+    background: linear-gradient(180deg, #E12D06 50%, #DFDFDF 50%);
+    border: 0.1em solid #000000;
+    margin: 0.5em;
+    padding: 0.5em;
     height: 10em;
     width: 10em;
-    border-radius: 8px;
+    border-radius: 4em;
     text-align: center;
     text-transform: capitalize;
     display: inline-block;
@@ -20,7 +22,7 @@
 
 .pokemonList a {
     color: #FFFFFF;
-    text-decoration: none;
+    /* text-decoration: none; */
     font-size: 0.8em;
     /* width: 250px; */
   }
@@ -41,5 +43,5 @@
 
 .pokemonPageNumber a {
     color: black;
-    text-decoration: none;
+    /* text-decoration: none; */
 }

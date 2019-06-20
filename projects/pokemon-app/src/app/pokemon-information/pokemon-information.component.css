@@ -143,22 +143,18 @@
 }
 
 #backButton {
-    width: 4em;
-    height: 1.5em;
+    width: 7em;
+    height: 2em;
     background-color: #5E5E5E;
     border: solid;
     border-radius: 2em;
     text-align: center;
-}
-
-#backButtonLink {
     color: #FFFFFF;
-    text-decoration: none;
+    padding: 0.2em;
 }
-
 
 .imgSrc {
-    cursor: pointer;
+    /* cursor: pointer; */
     border: dashed;
     border-radius: 2em;
     height: 5em;
