@@ -13,7 +13,8 @@ export class PokemonServiceService {
   private pokemonOffset = '?offset=';
   private pokemonLimit = '&limit=';
   private pokemonPageLimit = 66;
-  private pokemonsDesc = 'https://pokeapi.co/api/v2/pokemon-species/';
+  private pokemonDesc = 'https://pokeapi.co/api/v2/pokemon-species/';
+
 
   constructor(private http: HttpClient) { }
 
@@ -30,6 +31,7 @@ export class PokemonServiceService {
   }
 
   getPokemonDesc(name: string) {
-    return this.http.get<PokemonSpecies>(this.pokemonsDesc+name);
+    return this.http.get<PokemonSpecies>(this.pokemonDesc+name);
   }
+  
 }

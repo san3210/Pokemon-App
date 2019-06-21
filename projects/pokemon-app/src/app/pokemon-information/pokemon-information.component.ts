@@ -49,16 +49,16 @@ export class PokemonInformationComponent implements OnInit {
         this.pokemonStatDesc = pokeInfo.stats
         this.pokemonIsDefault = pokeInfo.is_default
         this.pokemonSpeciesName = pokeInfo.species
+        
           if(this.pokemonIsDefault==true) {
             this.pokemonService.getPokemonDesc(this.pokemonSpeciesName.name)
-            .subscribe(pokeDesc => {
-              this.pokemonDescription = pokeDesc.flavor_text_entries
-              console.log(this.pokemonDescription);
-              });   
+            .subscribe(pokeDesc => this.pokemonDescription = pokeDesc.flavor_text_entries);   
           }
       });
+
       this.pokemonService.getPokemonStats(this.pokeName)
       .subscribe(pokeStats => this.pokemonBaseStats = pokeStats.base_stat);
+      
     }
   }
 }

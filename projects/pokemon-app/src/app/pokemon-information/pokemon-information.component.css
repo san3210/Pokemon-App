@@ -93,14 +93,21 @@
     background-color: #B8A038;
 }
 
+#shadow {
+    background-color: #3E3355
+}
+
 #steel {
     background-color: #B8B8D0;
+}
+
+#unknown {
+    background-color: #68A090;
 }
 
 #water {
     background-color: #6890F0;
 }
-
 
 .pokeStat {
     border: solid;
@@ -154,24 +161,18 @@
 }
 
 .imgSrc {
-    /* cursor: pointer; */
     border: dashed;
-    border-radius: 2em;
-    height: 5em;
-    width: 5.5em;
-    background-color: #c2ced6;
+    height: 6em;
+    width: 6em;
+    /* border-radius: 2em;
+    background-color: #c2ced6;  */
 }
 
-
 .imgSrc2 {
-    /* position: relative; */
-    /* display: inline-block; */
-    /* padding: 0.3em; */
-    /* top: 3em; */
     right: -0.4em;
     height: 3.5em;
     width: 3.5em;
     border: dotted;
-    border-radius: 2em;
-    background-color: #c2ced6;
+    /* border-radius: 2em;
+    background-color: #c2ced6; */
 }
